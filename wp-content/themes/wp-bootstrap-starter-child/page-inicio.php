@@ -136,7 +136,7 @@ get_header(); ?>
 
                                             <p class="l-news__highlight__card-info u-line-height-100 mt-3">
                                                 <span class="u-font-weight-semibold">
-                                                    por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?>
+                                                    por <?php echo get_the_author_meta('user_firstname');?>
                                                 </span> <br>
 
                                                 <span 
@@ -240,7 +240,7 @@ get_header(); ?>
                                                         </h6>
 
                                                         <p class="l-news__medium__card-info u-line-height-100">
-                                                            <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?></span> <br>
+                                                            <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname');?></span> <br>
                                                             <span class="u-font-weight-bold"
                                                             style="color: <?php echo $backgroundColor; ?>;">
                                                                 <?php 
@@ -340,7 +340,7 @@ get_header(); ?>
                                                             </h6>
 
                                                             <p class="l-news__small__card-info u-line-height-100">
-                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?></span> <br>
+                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname');?></span> <br>
                                                                 <span 
                                                                 class="u-font-weight-bold"
                                                                 style="color: <?php echo $backgroundColor; ?>;">
@@ -444,7 +444,7 @@ get_header(); ?>
                                                             </h6>
 
                                                             <p class="l-news__small__card-info u-line-height-100">
-                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?></span> <br>
+                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname');?></span> <br>
                                                                 <span 
                                                                 class="u-font-weight-bold"
                                                                 style="color: <?php echo $backgroundColor; ?>;">
