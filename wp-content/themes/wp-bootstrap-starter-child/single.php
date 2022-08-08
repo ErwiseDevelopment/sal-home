@@ -56,7 +56,7 @@ get_header(); ?>
                                 <strong>Por: </strong> <?php echo get_the_author_meta('user_firstname')?>
                             </p>
                             
-                            <?php
+                            <!-- <?php
                                 $cats = array();
 
                                 $editorials = array(
@@ -84,7 +84,7 @@ get_header(); ?>
                             <p class="u-font-size-14 u-font-weight-medium">
                                 <strong>Categorias: </strong><?php echo $category_editorial_current; ?>
                             </p>
-                        </div>
+                        </div> -->
 
                         <hr>
 
