@@ -70,7 +70,7 @@
                                                 <p class="l-blogs__card-text mb-2">
                                                     <!-- <span class="u-font-weight-semibold">Pastoral Juvenil</span> <br> -->
                                                     <span class="u-font-weight-semibold">
-                                                        <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?>
+                                                    por <?php echo get_the_author_meta('user_firstname')?>
                                                     </span> <br>
 
                                                     <!-- <span class="u-font-weight-bold u-color-folk-secondary">em 11/08/2021</span> -->
