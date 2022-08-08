@@ -194,7 +194,7 @@ add_filter('rest_prepare_post', 'my_filter_post', 10, 3);
 
 function my_filter_post($data, $post, $context) {
     $data->data['post_date'] = get_the_date( 'd/m/Y', $post->ID );
-    $data->data['post_author'] = get_the_author_meta('user_firstname', $author_id) . ' ' . get_the_author_meta( 'user_lastname', $author_id);
+    $data->data['post_author'] = get_the_author_meta('user_firstname');
     $data->data['post_excerpt'] = limit_words(get_the_excerpt(), 25);
     
     $editorias = array(
