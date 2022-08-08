@@ -83,8 +83,8 @@ get_header(); ?>
 
                             <p class="u-font-size-14 u-font-weight-medium">
                                 <strong>Categorias: </strong><?php echo $category_editorial_current; ?>
-                            </p>
-                        </div> -->
+                            </p> -->
+                        </div>
 
                         <hr>
 
