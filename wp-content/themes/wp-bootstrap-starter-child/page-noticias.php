@@ -12,6 +12,7 @@
  * @package WP_Bootstrap_Starter
  */
 
+
 get_header(); ?>
 
 <section id="primary" class="content-area">
@@ -60,9 +61,11 @@ get_header(); ?>
                     'Portal',
                     'Institucional',
                     'Paróquia',
-                    'Ensino',
+                    'Ensino Notícia Destaque',
                     'Pastoral Juvenil',
-                    'Vocacional',
+                    'Vocacional Notícia Destaque',
+                    // 'Vocacional',
+                    // 'Vocacional Notícia',
                     'Obras Sociais',
                     'Gráfica'
                 );
@@ -189,7 +192,9 @@ get_header(); ?>
                             ?>
                                             <div class="col-md-6 col-lg-4 my-3">
 
-                                                <div class="card h-100 border-0">
+                                                <a 
+                                                class="card h-100 border-0 d-block text-decoration-none"
+                                                href="<?php the_permalink() ?>">
 
                                                     <div class="card-img">
                                                         <?php
@@ -199,6 +204,7 @@ get_header(); ?>
                                                                 array(
                                                                     'class' => 'img-fluid w-100 h-100',
                                                                     'alt'   => $altTitle,
+                                                                    'style' => 'height:145px!important;object-fit:cover'
                                                             ));
                                                         ?>
                                                     </div>
@@ -224,16 +230,13 @@ get_header(); ?>
                                                         <div class="row">
 
                                                             <div class="col-md-10">
-                                                                <a
-                                                                class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white py-2 px-5"
-                                                                href="<?php the_permalink() ?>"
-                                                                style="background-color:<?php echo $backgroundColor ? $backgroundColor : '#0B4DAD!important'; ?>">
+                                                                <p class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white mb-0 py-2 px-5" style="background-color:<?php echo $backgroundColor ? $backgroundColor : '#0B4DAD!important'; ?>">
                                                                     Ler mais
-                                                                </a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                             <?php        endif;
                                     endwhile;
@@ -266,3 +269,5 @@ get_header(); ?>
 <?php
 
 get_footer();
+
+

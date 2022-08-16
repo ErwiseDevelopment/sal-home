@@ -13,17 +13,31 @@ global $wp_query;
 get_header(); ?>
 
 <!-- 
-    $cat = $wp_query->get_queried_object();
-    $category = get_category( $cat->term_id );
-    $backgroundColor = get_field( 'cor_de_fundo', $category);
+    
 -->
+<?php
+   $cat = $wp_query->get_queried_object();
+   $category = get_category( $cat->term_id );
+   $backgroundColor = get_field( 'cor_de_fundo',  $category);
+    
+?>
 <section id="primary" class="content-area l-categories">
-
+<div class= "container-fluid">
+    <div class="row">
+         <div class="row"><div class="col-12 px-0">
+                <img
+                class="img-fluid"
+                src="<?php echo get_field( 'imagem_de_fundo', $category)?>"
+                alt="blog">
+            </div>
+    </div>
+</div>
     <div id="main" class="site-main container" role="main">
 
         <div class="row">
 
             <div class="col-12">
+                
 
                 <div class="row">
 

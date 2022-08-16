@@ -96,13 +96,17 @@ get_header(); ?>
 										if( $catt->name == $editoria ) {
 											$background_color = get_field( 'cor_de_fundo', $catt); 
 											$category_name = $catt->name;
+										} else {
+											$category_name = $catt->name;
 										}
 									}
 								}
 					?>
 								<div class="col-md-3 my-3">
 
-									<div class="card border-0">
+									<a 
+									class="card border-0"
+									href="<?php the_permalink() ?>">
 
 										<div class="card-img l-all-blog__card-img">
 
@@ -118,32 +122,42 @@ get_header(); ?>
 													'post-thumbnail',
 													array(
 														'class' => 'img-fluid w-100 h-100',
-														'alt'   => $alt_title
+														'alt'   => $alt_title,
+														'style' => 'object-fit:cover'
 													)
 												);
 											?>
 										</div>
 
 										<div class="card-body pt-1 pb-0 px-0">
-											<a 
-											class="u-line-height-100 u-font-weight-bold u-color-folk-black mb-2"
-											href="<?php the_permalink() ?>">
+											<p class="u-line-height-100 u-font-weight-bold u-color-folk-black mb-2">
 												<!-- Curiosidades sobre os salesianos que você não sabia -->
 												<?php the_title() ?>
-											</a>
+											</p>
 										</div>
 
-										<div class="card-footer border-0 u-bg-folk-none pl-0">
+										<div class="card-footer border-0 u-bg-folk-none px-0">
 
-											<a
+											<!-- <a
 											class="u-border-2 u-font-weight-bold text-decoration-none py-2 px-5"
-											style="border-color:<?php echo $background_color ? $background_color : '#0B4DAD !important'; ?>;color:<?php echo $background_color ? $background_color: '#0B4DAD !important'; ?>"
-											href="<?php echo get_category_link( $catt->term_id ) ?>">
-												<!-- Ensino -->
-												<?php echo $category_name ? $category_name : 'Portal'; ?>
-											</a>
+											style="border-color:<php echo $background_color ? $background_color : '#0B4DAD !important'; ?>;color:<php echo $background_color ? $background_color: '#0B4DAD !important'; ?>"
+											href="<php echo get_category_link( $catt->term_id ) ?>">
+												Ensino
+												<php 
+													echo $category_current ? $category_current : 'Blog'; 
+												?>
+											</a> -->
+
+											<div class="row">
+
+												<div class="col-md-10">
+													<p class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white mb-0 py-2 px-5" style="background-color: #0b4dad;">
+														Ler mais
+													</p>
+												</div>
+											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 					<?php 	endwhile; 
 						endif;

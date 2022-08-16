@@ -14,6 +14,48 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<?php
+    $status = false;
+
+    $editorials = array(
+        'Portal',
+        'Institucional',
+        'Paróquia',
+        'Ensino',
+        'Pastoral Juvenil',
+        'Vocacional',
+        'Obras Sociais',
+        'Gráfica'
+    );
+
+
+	foreach (get_the_category( get_the_ID() ) as $category) {
+        foreach( $editorials as $editorial ) {
+            if( $category->name != $editorial ) {
+                if( get_field( 'imagem_de_fundo', $category ) ) {
+                    $background_image = get_field( 'imagem_de_fundo', $category );
+                    $status = true;
+                }
+            }
+
+            if( $status ) break; 
+        }
+	}
+?>
+	
+<section>
+	
+	<div class="container-fluid">
+		
+		<div class="row">
+			
+			<div class="col-12 px-0">
+				<img class="img-fluid w-100" src="<?php echo $background_image; ?>" alt="<?php the_title() ?>">
+			</div>
+		</div>
+	</div>
+</section>
+	
 <section class="l-single-post py-5">
 
     <div class="container">
@@ -46,17 +88,17 @@ get_header(); ?>
                             <?php the_title() ?>
                         </h1>
 
-                        <div class="d-flex justify-content-between pr-4">
-                            <p class="u-font-size-14 u-font-weight-medium">
-                                <strong>Em: </strong> <?php echo get_the_date( 'd/m/Y', $post->ID ); ?>
+                        <div class="d-flex justify-content-between align-items-center u-bg-folk-primary p-3">
+                            <p class="u-font-size-14 u-font-weight-medium u-color-folk-white mb-0">
+                                <strong class="u-color-folk-white">Em: </strong> <?php echo get_the_date( 'd/m/Y', $post->ID ); ?>
                             </p>
 
-                            <p class="u-font-size-14 u-font-weight-medium">
+                            <p class="u-font-size-14 u-font-weight-medium u-color-folk-white mb-0">
                                 <!-- <strong>Por: </strong>Inspetoria São Pio X -->
-                                <strong>Por: </strong> <?php echo get_the_author_meta('user_firstname')?>
+                                <strong class="u-color-folk-white">Por: </strong><?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?>
                             </p>
                             
-                            <!-- <?php
+                            <?php
                                 $cats = array();
 
                                 $editorials = array(
@@ -76,14 +118,16 @@ get_header(); ?>
                                     foreach( $editorials as $editorial) {
                                         if( $cat->name == $editorial ) {
                                             $category_editorial_current = $cat->name;
-                                        }
+                                        } else {
+											$category_editorial_current = $cat->name;
+										}
                                     }
                                 }
                             ?>
 
-                            <p class="u-font-size-14 u-font-weight-medium">
-                                <strong>Categorias: </strong><?php echo $category_editorial_current; ?>
-                            </p> -->
+                            <p class="u-font-size-14 u-font-weight-medium u-color-folk-white mb-0">
+                                <strong class="u-color-folk-white">Categorias: </strong><?php echo $category_editorial_current; ?>
+                            </p>
                         </div>
 
                         <hr>
@@ -97,6 +141,7 @@ get_header(); ?>
 
                             <?php the_content() ?>
                         </span>
+						<?php echo sharethis_inline_buttons(); ?>
                     </div>
 
                     <div class="col-lg-4 pt-3">
@@ -164,7 +209,7 @@ get_header(); ?>
                                                 if($postCurrentID != get_the_id()) : 
                                     ?>
 
-                                                    <div class="col-12 u-border-bottom-1 last-child:u-border-none u-border-color-light-gray mb-3 pb-3">
+                                                    <a class="col-12 u-border-bottom-1 last-child:u-border-none u-border-color-light-gray text-decoration-none mb-3 pb-3" href="<?php the_permalink() ?>">
 
                                                         <div class="row">
 
@@ -186,15 +231,23 @@ get_header(); ?>
                                                             </div>
 
                                                             <div class="col-8">
-                                                                <a
-                                                                class="u-font-size-14 u-font-weight-bold text-uppercase u-color-folk-black"
-                                                                href="#">
+                                                                <p
+                                                                class="u-font-size-14 u-font-weight-bold u-color-folk-black mb-0">
                                                                     <!-- 5 curiosidades sobre a vida de Dom Bosco -->
                                                                     <?php the_title() ?>
-                                                                </a>
+                                                                </p>
+																
+																<div class="row">
+
+                                                            		<div class="col-md-9">
+                                                                		<p class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-size-12 u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-primary mb-0 py-2 px-5">
+                                                                    		Ler mais
+                                                                		</p>
+                                                            		</div>
+                                                        		</div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                     <?php       endif;
                                             endwhile; 
                                         endif;
@@ -245,6 +298,14 @@ get_header(); ?>
                                     </div> -->
                                     <!-- loop -->
                                 </div>
+								
+								<div class="row">
+									<div class="col-12">
+										<a class="hover:u-opacity-8 d-block text-decoration-none" href="">
+                                        	<img class="img-fluid" src="https://portal.erwisedev-hml.com.br/wp-content/uploads/2022/01/illustration-image-3.png" alt="Início">
+                                    	</a>
+									</div>
+								</div>
                             </div>
                         </div>
                     </div>

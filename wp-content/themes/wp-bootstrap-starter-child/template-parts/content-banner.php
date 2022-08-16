@@ -11,19 +11,24 @@
 
                     <div class="swiper-wrapper">
 
-                        <!-- slide -->
-                        <?php if(have_rows( 'banner' )) :
-                            while(have_rows( 'banner' ) ) : the_row();
+                  <!-- slide -->
+                  <?php if(have_rows( 'banner' )) :
+                                while(have_rows( 'banner' ) ) : the_row();
+                                    if( get_sub_field( 'imagem' ) ) :
+                                        if( get_sub_field('link_banner')):
                         ?>
-                                <a 
-                                class="swiper-slide"
-                                href="<?php echo get_sub_field( 'link' ) ?>">
-                                    <img
-                                    class="img-fluid"
-                                    src="<?php echo get_sub_field( 'imagem' ) ?>"
-                                    alt="">
-                                </a>
-                        <?php endwhile;
+                                        <div class="swiper-slide">
+                                           <a href="<?php echo get_sub_field('link_banner') ?>"> 
+                                                <img
+                                                class="img-fluid"
+                                                src="<?php echo get_sub_field( 'imagem' ) ?>"
+                                                alt="<?php the_title() ?>">
+                                           </a>
+                                        </div>
+                        <?php 
+                                    endif;
+                                endif;
+                                endwhile;
                             endif;
                         ?>
                         <!-- end slide -->

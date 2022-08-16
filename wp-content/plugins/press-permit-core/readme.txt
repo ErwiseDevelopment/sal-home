@@ -5,7 +5,7 @@ Tags: restrict, access, permissions, cms, user, private, category, pages, privac
 Requires at least: 4.9.7
 Tested up to: 6.0
 Requires PHP: 5.6.20
-Stable tag: 3.7.6
+Stable tag: 3.7.10
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -237,6 +237,20 @@ Yes, we use the phrase "publishpress-ppcore-install" to share install links. You
 9. Create your own Privacy Statuses: Create visibility options for your content. One example is a "Premium" status that makes content visible only for paying members. 
 
 == Changelog ==
+
+= 3.7.10 - 7 Jul 2022 =
+* Fixed : Filter 'use_block_editor_for_post' was not recognized in detecting block editor disable
+* Fixed : Category Permissions - Assign Category restrictions did not prevent checkbox display in Gutenberg post editor
+
+= 3.7.9 - 8 Jun 2022 =
+* Fixed : REST post creation - Category Assign restrictions were not applied unless accompanied with Edit restrictions; caused new category to be created
+* Fixed : Permission Groups screen - Roles column displays unrendered html tags under some configurations
+
+= 3.7.8 - 2 Jun 2022 =
+* Fixed : Access failures under some configurations
+
+= 3.7.7 - 2 Jun 2022 =
+* Fixed : Authors could not create new posts; possibility of other access failures
 
 = 3.7.6 - 1 Jun 2022 =
 * Compat : WP 6.0 - Fatal error loading Customizer with PublishPress Revisions active, possibly in other areas
