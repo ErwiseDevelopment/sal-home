@@ -95,7 +95,7 @@ get_header(); ?>
 
                             <p class="u-font-size-14 u-font-weight-medium u-color-folk-white mb-0">
                                 <!-- <strong>Por: </strong>Inspetoria São Pio X -->
-                                <strong class="u-color-folk-white">Por: </strong><?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?>
+                                <strong class="u-color-folk-white">Por: </strong><?php echo get_the_author_meta('user_firstname' ) . ' ' . get_the_author_meta( 'user_lastname' ); ?>
                             </p>
                             
                             <?php

@@ -248,7 +248,7 @@ get_header(); ?>
                     </div>
 
                     <div class="col-md-3">
-                        <a href="<?php echo get_field( 'link_ilustrativa' )?>">
+                        <a href="<?php echo get_field( 'link_ilustrativa', )?>">
                             <img
                             class="img-fluid sticky-top pt-3"
                             src="<?php echo get_field( 'imagem_ilustrativa' ) ?>"
