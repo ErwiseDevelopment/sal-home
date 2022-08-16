@@ -1,55 +1,37 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * Template part for displaying a message that posts cannot be found
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+?>
 
-<section id="primary" class="content-area">
-<div id="main" class="site-main" role="main">
+<section class="no-results not-found">
+	<header class="page-header">
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wp-bootstrap-starter' ); ?></h1>
+	</header><!-- .page-header -->
 
-<section class="my-5 py-5">
+	<div class="page-content">
+		<?php
+		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-	<div class="container">
+			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wp-bootstrap-starter' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
-		<div class="row">
+		<?php elseif ( is_search() ) : ?>
 
-			<div class="col-12">
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wp-bootstrap-starter' ); ?></p>
+			<?php
+				get_search_form();
 
-				<h1 class="l-error__title u-line-height-100 u-font-weight-bold text-center text-uppercase mb-5">
-					Erro <br>
-					<span class="l-error__number">404</span>
-				</h1>
+		else : ?>
 
-				<p class="l-error__text u-font-weight-bold text-center">
-					Desculpe, mas não encontramos nada! :(
-				</p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wp-bootstrap-starter' ); ?></p>
+			<?php
+				get_search_form();
 
-				<div class="row justify-content-center">
-
-					<div class="col-md-4 mt-5">
-						<a
-						class="w-100 border rounded d-block u-font-weight-bold text-center text-decoration-none u-color-folk-black hover:u-color-folk-white hover:u-bg-folk-golden py-2"
-						href="<?php echo get_home_url( null, '/' ) ?>">
-							Ir para a página inicial
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-</div><!-- .page-content -->
-</section><!-- .error-404 -->
-
-</div><!-- #main -->
-</section><!-- #primary -->
-
-<?php
-
-get_footer();
+		endif; ?>
+	</div><!-- .page-content -->
+</section><!-- .no-results -->

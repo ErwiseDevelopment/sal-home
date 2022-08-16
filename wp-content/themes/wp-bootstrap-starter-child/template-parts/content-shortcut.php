@@ -1,5 +1,5 @@
 <section class="l-shortcut my-5">
-<!-- highlight -->
+
     <div class="container">
 
         <div class="row justify-content-center">
@@ -17,7 +17,7 @@
                         ));
 
                         foreach($terms as $term) {
-                            if($term->term_id == 46 || $term->term_id == 56 || $term->term_id == 51 || $term->term_id == 39 || $term->term_id == 60 || $term->term_id == 65) {
+                            if($term->term_id == 43 || $term->term_id == 7 || $term->term_id == 8 || $term->term_id == 9 || $term->term_id == 36) {
                                 array_push($categories, $term);
                             }
                         }
@@ -33,10 +33,7 @@
                                 class="l-shortcut__link u-font-weight-bold text-uppercase text-decoration-none"
                                 style="color:<?php echo $color; ?>"
                                 href="<?php echo get_category_link( $category->term_id ) ?>">
-                                    <?php 
-                                        $category_current = str_replace('Blog', "", $category->name); 
-                                        echo '+ ' . $category_current;
-                                    ?>
+                                    + <?php echo $category->name; ?>
                                 </a>
                             </li>
                     <?php endforeach; ?>

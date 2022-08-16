@@ -1,4 +1,4 @@
-<section class="l-videos my-4"><!-- highlight -->
+<section class="l-videos my-4">
 
     <div class="container">
 

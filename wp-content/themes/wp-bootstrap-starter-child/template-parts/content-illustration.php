@@ -33,7 +33,7 @@
                         endif;
                     ?>
 
-                    <!-- zz<div 
+                    <!-- <div 
                     class="col-md-4 my-3 my-md-0"
                     data-aos="fade-up"
                     data-aos-duration="600"

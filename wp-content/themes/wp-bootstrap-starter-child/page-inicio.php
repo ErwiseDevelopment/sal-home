@@ -136,7 +136,7 @@ get_header(); ?>
 
                                             <p class="l-news__highlight__card-info u-line-height-100 mt-3">
                                                 <span class="u-font-weight-semibold">
-                                                    por <?php echo get_the_author_meta('user_firstname');?>
+                                                    por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?>
                                                 </span> <br>
 
                                                 <span 
@@ -240,7 +240,7 @@ get_header(); ?>
                                                         </h6>
 
                                                         <p class="l-news__medium__card-info u-line-height-100">
-                                                            <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname');?></span> <br>
+                                                            <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?></span> <br>
                                                             <span class="u-font-weight-bold"
                                                             style="color: <?php echo $backgroundColor; ?>;">
                                                                 <?php 
@@ -340,7 +340,7 @@ get_header(); ?>
                                                             </h6>
 
                                                             <p class="l-news__small__card-info u-line-height-100">
-                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname');?></span> <br>
+                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?></span> <br>
                                                                 <span 
                                                                 class="u-font-weight-bold"
                                                                 style="color: <?php echo $backgroundColor; ?>;">
@@ -444,7 +444,7 @@ get_header(); ?>
                                                             </h6>
 
                                                             <p class="l-news__small__card-info u-line-height-100">
-                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname');?></span> <br>
+                                                                <span class="u-font-weight-semibold">por <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?></span> <br>
                                                                 <span 
                                                                 class="u-font-weight-bold"
                                                                 style="color: <?php echo $backgroundColor; ?>;">
@@ -488,7 +488,7 @@ get_header(); ?>
 <!-- end news -->
 
 <!-- shortcut -->
-<?php echo get_template_part( 'template-parts/content', 'shortcut-home' ) ?>
+<?php echo get_template_part( 'template-parts/content', 'shortcut' ) ?>
 <!-- end shortcut -->
 
 <!-- most read -->
@@ -508,7 +508,7 @@ get_header(); ?>
 <!-- end materials -->
 
 <!-- calendar -->
-<?php echo get_template_part( 'template-parts/content', 'calendar' ) ?><!-- highlight -->
+<?php echo get_template_part( 'template-parts/content', 'calendar' ) ?>
 <!-- end calendar -->
 
 <!-- links -->
@@ -728,7 +728,80 @@ get_header(); ?>
                                     endif;
                                 endif;
                             ?>
-                            
+                            <!-- end loop -->
+
+                            <!-- <div class="col-12 u-border-bottom-2 last-child:u-border-none u-border-color-primary py-3">
+
+                                <div class="d-flex justify-between-center align-items-center">
+                                    <p class="l-other-posts__podcast-number u-font-weight-bold u-color-folk-primary mb-0">
+                                        #05
+                                    </p>
+
+                                    <p class="l-other-posts__podcast-title u-line-height-100 u-font-weight-bold u-color-folk-green mb-0 ml-2">
+                                        Ajudar os outros?
+                                        Porquê? Para que?
+                                    </p>
+                                </div>
+
+                                <p class="u-font-size-12 u-font-weight-semibold">
+                                    Neste programa, P. Edvaldo Nogueira, referencial 
+                                    da PJS no Rio Grande do Sul, e P. Adriano Toiller, 
+                                    referencial da PJS no Paraná, conversam com Juan 
+                                    Carlos Montenegro, coordenador do "Salesian 
+                                    Volunteers" e Irmã Solange Sanches, Filha de Maria 
+                                    Auxiliadora. Acompanhe.
+                                </p>
+
+                                <a 
+                                class="d-flex justify-content-end align-items-center"
+                                href="#">
+                                    <p class="u-font-size-12 u-font-weight-bold text-right u-color-folk-primary mb-0 mr-2">
+                                        30 de agosto <br>
+                                        62 minutos
+                                    </p>
+
+                                    <img
+                                    class="img-fluid"
+                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-play.png"
+                                    alt="">
+                                </a>
+                            </div>
+
+                            <div class="col-12 u-border-bottom-2 last-child:u-border-none u-border-color-primary py-3">
+
+                                <div class="d-flex justify-between-center align-items-center">
+                                    <p class="l-other-posts__podcast-number u-font-weight-bold u-color-folk-primary mb-0">
+                                        #04
+                                    </p>
+
+                                    <p class="l-other-posts__podcast-title u-line-height-100 u-font-weight-bold u-color-folk-green mb-0 ml-2">
+                                        Missionário...
+                                        Eu?
+                                    </p>
+                                </div>
+
+                                <p class="u-font-size-12 u-font-weight-semibold">
+                                    Neste programa, os missionários Ana e Irmão 
+                                    Lucas vão conversar sobre o "ser missionário" 
+                                    com os convidados da noite: P. Gilson Marcos da 
+                                    Silva, Inspetor Salesiano; Gilson Cardoso, Assessor 
+                                    e Coordenador de Pastoral e Ane Caroline 
+                                    Machado, coordenadora da AMJ.
+                                </p>
+
+                                <a class="d-flex justify-content-end align-items-center"
+                                href="#">
+                                    <p class="u-font-size-12 u-font-weight-bold text-right u-color-folk-primary mb-0 mr-2">
+                                        30 de julho <br>
+                                        62 minutos
+                                    </p>
+
+                                    <img
+                                    class="img-fluid"
+                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-play.png"
+                                    alt="">
+                                </a>
+                            </div> -->
                         </div>
 
                         <div class="row">

@@ -12,7 +12,6 @@
  * @package WP_Bootstrap_Starter
  */
 
-
 get_header(); ?>
 
 <section id="primary" class="content-area">
@@ -49,7 +48,7 @@ get_header(); ?>
 
         <div class="row">
 
-            <!--aa highlight -->
+            <!-- highlight -->
             <?php
                 if( isset( $category_id )) {
                     $category_highlight = get_category( $category_id );
@@ -61,11 +60,9 @@ get_header(); ?>
                     'Portal',
                     'Institucional',
                     'Paróquia',
-                    'Ensino Notícia Destaque',
+                    'Ensino',
                     'Pastoral Juvenil',
-                    'Vocacional Notícia Destaque',
-                    // 'Vocacional',
-                    // 'Vocacional Notícia',
+                    'Vocacional',
                     'Obras Sociais',
                     'Gráfica'
                 );
@@ -192,9 +189,7 @@ get_header(); ?>
                             ?>
                                             <div class="col-md-6 col-lg-4 my-3">
 
-                                                <a 
-                                                class="card h-100 border-0 d-block text-decoration-none"
-                                                href="<?php the_permalink() ?>">
+                                                <div class="card h-100 border-0">
 
                                                     <div class="card-img">
                                                         <?php
@@ -204,7 +199,6 @@ get_header(); ?>
                                                                 array(
                                                                     'class' => 'img-fluid w-100 h-100',
                                                                     'alt'   => $altTitle,
-                                                                    'style' => 'height:145px!important;object-fit:cover'
                                                             ));
                                                         ?>
                                                     </div>
@@ -230,13 +224,16 @@ get_header(); ?>
                                                         <div class="row">
 
                                                             <div class="col-md-10">
-                                                                <p class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white mb-0 py-2 px-5" style="background-color:<?php echo $backgroundColor ? $backgroundColor : '#0B4DAD!important'; ?>">
+                                                                <a
+                                                                class="l-news__small__card-read-more u-line-height-100 hover:u-opacity-8 d-block u-font-weight-bold text-center text-decoration-none u-color-folk-white py-2 px-5"
+                                                                href="<?php the_permalink() ?>"
+                                                                style="background-color:<?php echo $backgroundColor ? $backgroundColor : '#0B4DAD!important'; ?>">
                                                                     Ler mais
-                                                                </p>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </div>
                                             </div>
                             <?php        endif;
                                     endwhile;
@@ -248,7 +245,7 @@ get_header(); ?>
                     </div>
 
                     <div class="col-md-3">
-                        <a href="<?php echo get_field( 'link_ilustrativa', )?>">
+                        <a href="<?php echo get_field( 'link_ilustrativa' )?>">
                             <img
                             class="img-fluid sticky-top pt-3"
                             src="<?php echo get_field( 'imagem_ilustrativa' ) ?>"
@@ -269,5 +266,3 @@ get_header(); ?>
 <?php
 
 get_footer();
-
-

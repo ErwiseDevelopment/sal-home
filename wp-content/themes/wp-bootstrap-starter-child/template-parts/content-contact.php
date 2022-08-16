@@ -22,25 +22,28 @@
                         <div class="row justify-content-center">
 
                             <div class="col-12 mt-4">
-                            <iframe src="https://www.google.com/maps/d/embed?mid=11oNmQ7vTvIWHQ06yn6XhbuPYSUtFnCI&ehbc=2E312F" width="580" height="270"></iframe>
+                                <img
+                                class="img-fluid"
+                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/contact-map.png"
+                                alt="">
                             </div>
 
-                            <!-- <div class="col-8 col-md-12 d-flex flex-column flex-md-row justify-content-center mt-4 px-5">
+                            <div class="col-8 col-md-12 d-flex flex-column flex-md-row justify-content-center mt-4 px-5">
                                 <img
                                 class="img-fluid my-3 my-md-0"
-                                src="<php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-rs.png"
+                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-rs.png"
                                 alt="">
 
                                 <img
                                 class="img-fluid my-3 my-md-0 mx-4"
-                                src="?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-sc.png"
+                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-sc.png"
                                 alt="">
 
                                 <img
                                 class="img-fluid my-3 my-md-0"
-                                src="?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-pr.png"
+                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-pr.png"
                                 alt="">
-                            </div> --><!-- highlight -->
+                            </div>
                         </div>
                     </div>
 

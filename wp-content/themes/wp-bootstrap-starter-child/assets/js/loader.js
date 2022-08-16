@@ -3,4 +3,3 @@
         $( '.js-loader' ).delay( '2000' ).fadeOut( 'slow' )
     //})
 })(jQuery)
-

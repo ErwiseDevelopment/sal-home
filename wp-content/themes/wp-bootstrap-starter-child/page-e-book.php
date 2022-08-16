@@ -67,11 +67,11 @@ get_header(); ?>
                         if( $ebooks->have_posts() ) :
                             while( $ebooks->have_posts() ) : $ebooks->the_post();
                     ?>
-                                <div class="col-md-4 my-4">
+                                <div class="col-md-4 col-lg-3 my-4">
 
                                     <div class="row">
 
-                                        <div class="col-md-10 d-flex justify-content-center align-items-center">
+                                        <div class="col-md-6 d-flex justify-content-center align-items-center">
                                             <!-- <img 
                                             class="img-fluid" 
                                             src="https://portal.erwise.com.br/wp-content/uploads/2022/02/convocação.png" 
@@ -90,20 +90,19 @@ get_header(); ?>
                                             ?>
                                         </div>
 
-                                        <div class="col-md-10">
+                                        <div class="col-md-6">
                                             
                                             <p class="l-digital__book__tag u-font-weight-extrabold u-color-folk-theme mb-2">
                                                 // E-book
-                                                <!-- <php
-                                                    $categories = get_the_terms( get_the_ID(), 'ebook-categoria' ); 
-                                                    echo $categories[0]->name;
-                                                ?> -->
                                             </p>
 
                                             <h6 class="l-digital__book__title u-font-size-12 u-font-weight-extrabold mb-4">
-                                                
+                                                <!-- Convocação – janeiro -->
                                                 <?php the_title() ?>
                                             </h6>
+
+                                            <!-- <p class="l-digital__book__description u-font-weight-medium">
+                                            </p> -->
 
                                             <div class="row">
 

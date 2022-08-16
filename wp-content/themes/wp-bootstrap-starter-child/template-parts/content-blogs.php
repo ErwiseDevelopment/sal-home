@@ -14,7 +14,7 @@
                         </h3>
 
                         <p class="c-text-pattern u-line-height-100 u-font-weight-semibold mb-0 ml-3">
-                            Conteúdos de todas as nossas áreas <br><!-- highlight -->
+                            Conteúdos de todas as nossas áreas <br>
                             de atuação para você se aprofundar
                         </p>
                     </div>
@@ -70,7 +70,7 @@
                                                 <p class="l-blogs__card-text mb-2">
                                                     <!-- <span class="u-font-weight-semibold">Pastoral Juvenil</span> <br> -->
                                                     <span class="u-font-weight-semibold">
-                                                    por <?php echo get_the_author_meta('user_firstname')?>
+                                                        <?php echo get_the_author_meta('user_firstname', get_the_author_ID() ) . ' ' . get_the_author_meta( 'user_lastname', get_the_author_ID() ); ?>
                                                     </span> <br>
 
                                                     <!-- <span class="u-font-weight-bold u-color-folk-secondary">em 11/08/2021</span> -->

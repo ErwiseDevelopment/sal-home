@@ -1,4 +1,4 @@
-<section class="l-most-read my-5"><!-- highlight -->
+<section class="l-most-read my-5">
 
     <div class="container">
 
