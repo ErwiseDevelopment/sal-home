@@ -508,7 +508,7 @@ get_header(); ?>
 <!-- end materials -->
 
 <!-- calendar -->
-<?php echo get_template_part( 'template-parts/content', 'calendar' ) ?>
+<?php echo get_template_part( 'template-parts/content', 'calendar' ) ?><!-- highlight -->
 <!-- end calendar -->
 
 <!-- links -->

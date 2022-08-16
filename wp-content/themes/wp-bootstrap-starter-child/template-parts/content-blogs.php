@@ -14,7 +14,7 @@
                         </h3>
 
                         <p class="c-text-pattern u-line-height-100 u-font-weight-semibold mb-0 ml-3">
-                            Conteúdos de todas as nossas áreas <br>
+                            Conteúdos de todas as nossas áreas <br><!-- highlight -->
                             de atuação para você se aprofundar
                         </p>
                     </div>

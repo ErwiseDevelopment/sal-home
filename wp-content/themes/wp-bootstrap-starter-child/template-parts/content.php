@@ -8,7 +8,7 @@
  */
 
 ?>
-
+<!-- highlight -->
 <?php
 	$cat = $wp_query->get_queried_object();
     $category = get_category( $cat->term_id );

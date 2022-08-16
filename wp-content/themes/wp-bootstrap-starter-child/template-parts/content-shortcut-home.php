@@ -1,5 +1,5 @@
 
-<section class="l-shortcut my-5">
+<section class="l-shortcut my-5"><!-- highlight -->
 
     <div class="container">
 

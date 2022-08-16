@@ -49,7 +49,7 @@ get_header(); ?>
 
         <div class="row">
 
-            <!-- highlight -->
+            <!--aa highlight -->
             <?php
                 if( isset( $category_id )) {
                     $category_highlight = get_category( $category_id );

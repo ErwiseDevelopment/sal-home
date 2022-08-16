@@ -6,7 +6,7 @@
 
             <div class="col-12 px-0">
 
-                <!-- swiper -->
+                <!-- swiper --><!-- highlight -->
                 <div class="swiper-container js-swiper-banner">
 
                     <div class="swiper-wrapper">

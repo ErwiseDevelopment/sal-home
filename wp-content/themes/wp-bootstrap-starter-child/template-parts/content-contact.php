@@ -40,7 +40,7 @@
                                 class="img-fluid my-3 my-md-0"
                                 src="?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/icon-pr.png"
                                 alt="">
-                            </div> -->
+                            </div> --><!-- highlight -->
                         </div>
                     </div>
 
