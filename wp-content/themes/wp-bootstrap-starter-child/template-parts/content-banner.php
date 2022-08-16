@@ -11,14 +11,17 @@
 
                     <div class="swiper-wrapper">
 
-                  <!-- slide -->
-                  <?php if(have_rows( 'banner' )) :
+                <!-- slide a-->
+                <?php if(have_rows( 'banner' )) :
                                 while(have_rows( 'banner' ) ) : the_row();
                                     if( get_sub_field( 'imagem' ) ) :
-                                        if( get_sub_field('link_banner')):
+                                       
                         ?>
                                         <div class="swiper-slide">
-                                           <a href="<?php echo get_sub_field('link_banner') ?>"> 
+                                           <a href="<?php echo get_sub_field('link') ?>" 
+                                           <?php if(get_sub_field( 'nova_guia') == '1') : ?>
+                                                target="_blank"
+                                            <?php endif; ?>>
                                                 <img
                                                 class="img-fluid"
                                                 src="<?php echo get_sub_field( 'imagem' ) ?>"
@@ -27,7 +30,6 @@
                                         </div>
                         <?php 
                                     endif;
-                                endif;
                                 endwhile;
                             endif;
                         ?>
